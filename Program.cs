@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO; // StreamWriter();
 
 namespace TextEditor
 {
@@ -40,7 +41,7 @@ namespace TextEditor
         {
             Console.Clear();
             Console.WriteLine("Type anything below or press [ENTER + ESC] to exit.");
-            Console.WriteLine("===========================================");
+            Console.WriteLine("===================================================");
 
             string text = "";
 
@@ -51,6 +52,18 @@ namespace TextEditor
             } while (Console.ReadKey().Key != ConsoleKey.Escape);
 
             Console.Write(text);
+        }
+
+        static void Save(string text)
+        {
+            Console.Clear();
+            Console.Write("Enter the path where you want to save your file: ");
+            var path = Console.ReadLine();
+            
+            using(var file = new StreamWriter(path)) // Open and close the StreamWriter();
+            {
+                file.Write(text);
+            }
         }
     }
 }
