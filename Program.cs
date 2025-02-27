@@ -51,19 +51,25 @@ namespace TextEditor
                 text += Environment.NewLine;
             } while (Console.ReadKey().Key != ConsoleKey.Escape);
 
-            Console.Write(text);
+            Save(text);
         }
 
         static void Save(string text)
         {
             Console.Clear();
-            Console.Write("Enter the path where you want to save your file: ");
+            Console.Write("=> Enter the path where you want to save your file: ");
             var path = Console.ReadLine();
             
             using(var file = new StreamWriter(path)) // Open and close the StreamWriter();
             {
                 file.Write(text);
             }
+
+            Console.WriteLine($"The file {path} was saved successfully!");
+            Console.WriteLine("Press [Enter] to continue.");
+
+            Console.ReadLine();
+            Menu();
         }
     }
 }
