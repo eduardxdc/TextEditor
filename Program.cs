@@ -22,7 +22,7 @@ namespace TextEditor
             Console.WriteLine();
             Console.Write("Enter your choice: ");
             short option = short.Parse(Console.ReadLine());
-
+            
             switch (option)
             {
                 case 0: System.Environment.Exit(0); break;
@@ -34,14 +34,23 @@ namespace TextEditor
 
         static void OpenFile()
         {
-
         }
 
         static void EditFile()
         {
-            {
+            Console.Clear();
+            Console.WriteLine("Type anything below or press [ENTER + ESC] to exit.");
+            Console.WriteLine("===========================================");
 
-            }
+            string text = "";
+
+            do
+            {
+                text += Console.ReadLine();
+                text += Environment.NewLine;
+            } while (Console.ReadKey().Key != ConsoleKey.Escape);
+
+            Console.Write(text);
         }
     }
 }
