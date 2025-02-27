@@ -3,6 +3,8 @@
 
 This project (**console-app**) is a **text editor** made in **C#**, it was developed using switch/case statements, function call creation, string interpolation, text input and output, use of StreamReader and StreamWriter, do/while and also System.Environment classes.
 
+https://github.com/user-attachments/assets/70e17b94-b9e3-475f-9ab6-3a6bd87064b6
+
 ## Table of Contents
 
 - [Installations](#installations)
