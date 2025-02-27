@@ -1,8 +1,0 @@
-is_global = true
-build_property.RootNamespace = TextEditor
-build_property.ProjectDir = c:\dev\TextEditor\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.CsWinRTUseWindowsUIXamlProjections = false
-build_property.EffectiveAnalysisLevelStyle = 
-build_property.EnableCodeStyleSeverity = 
