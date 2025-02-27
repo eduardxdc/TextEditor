@@ -35,6 +35,21 @@ namespace TextEditor
 
         static void OpenFile()
         {
+            Console.Clear();
+            Console.Write("> Enter the path of the file you want to open: ");
+            string path = Console.ReadLine();
+
+            using (var file = new StreamReader(path))
+            {
+                string text = file.ReadToEnd();
+                Console.WriteLine(text);
+            }
+
+            Console.WriteLine($"File {path} was read successfully!");
+            Console.WriteLine("Press [Enter] to continue.");
+
+            Console.ReadLine();
+            Menu();
         }
 
         static void EditFile()
@@ -60,7 +75,7 @@ namespace TextEditor
             Console.Write("=> Enter the path where you want to save your file: ");
             var path = Console.ReadLine();
             
-            using(var file = new StreamWriter(path)) // Open and close the StreamWriter();
+            using(var file = new StreamWriter(path))
             {
                 file.Write(text);
             }
